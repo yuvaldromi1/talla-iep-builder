@@ -1,0 +1,314 @@
+/* StudentSelector.css */
+
+.student-selector {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  direction: rtl;
+}
+
+/* תווית */
+.selector-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.label-text {
+  font-size: 1rem;
+}
+
+.label-icon {
+  font-size: 1.2rem;
+}
+
+/* קונטיינר האינפוט */
+.selector-input-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.selector-input {
+  flex: 1;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+  direction: rtl;
+  text-align: right;
+}
+
+.selector-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.selector-input:disabled {
+  background-color: #f5f7fa;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.dropdown-toggle {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-toggle:hover {
+  color: #667eea;
+}
+
+.dropdown-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* רשימת תלמידים */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9ff;
+}
+
+.dropdown-item.selected {
+  background-color: #667eea;
+  color: white;
+}
+
+.dropdown-item.no-results {
+  color: #7f8c8d;
+  font-style: italic;
+  cursor: default;
+}
+
+.dropdown-item.no-results:hover {
+  background-color: transparent;
+}
+
+.dropdown-item.add-new {
+  background-color: #f8f9ff;
+  color: #667eea;
+  font-weight: 600;
+  border-top: 2px solid #e1e8ed;
+}
+
+.dropdown-item.add-new:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+.student-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.student-status {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.add-icon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #e1e8ed;
+  margin: 4px 0;
+}
+
+/* אינפוט תלמיד חדש */
+.add-new-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+  z-index: 1001;
+  margin-top: 4px;
+  padding: 16px;
+}
+
+.add-new-header {
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.add-new-input-container {
+  margin-bottom: 16px;
+}
+
+.add-new-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+  direction: rtl;
+  text-align: right;
+}
+
+.add-new-input:focus {
+  border-color: #667eea;
+}
+
+.add-new-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-add,
+.btn-cancel {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-add {
+  background: #667eea;
+  color: white;
+}
+
+.btn-add:hover:not(:disabled) {
+  background: #5a6fd8;
+  transform: translateY(-1px);
+}
+
+.btn-add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-cancel {
+  background: #e1e8ed;
+  color: #666;
+}
+
+.btn-cancel:hover {
+  background: #d4dae0;
+  transform: translateY(-1px);
+}
+
+/* טעינה */
+.loading-indicator {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  z-index: 999;
+  margin-top: 4px;
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu,
+.add-new-container,
+.loading-indicator {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .student-selector {
+    max-width: 100%;
+  }
+
+  .selector-input {
+    font-size: 16px; /* prevents zoom on iOS */
+  }
+
+  .dropdown-menu {
+    max-height: 250px;
+  }
+
+  .dropdown-item {
+    padding: 14px 16px;
+  }
+
+  .student-name {
+    font-size: 16px;
+  }
+}

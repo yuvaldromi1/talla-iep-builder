@@ -1,0 +1,162 @@
+.subdomain-group-container {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.subdomain-group-container:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subdomain-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e9ecef;
+  text-align: right;
+  direction: rtl;
+}
+
+.statements-section {
+  margin-bottom: 2rem;
+}
+
+.statements-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: right;
+  direction: rtl;
+}
+
+.section-header.strengths {
+  background: #e8f5e8;
+  color: #155724;
+  border-right: 4px solid #28a745;
+}
+
+.section-header.weaknesses {
+  background: #fff3cd;
+  color: #856404;
+  border-right: 4px solid #ffc107;
+}
+
+.statement-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.statement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.statement-item:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  transform: translateX(-2px);
+}
+
+.statement-item.selected {
+  background: #f0f7ff;
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.statement-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.statement-checkbox.checked {
+  background: linear-gradient(45deg, #007bff, #6f42c1);
+  color: white;
+}
+
+.statement-checkbox:hover {
+  transform: scale(1.1);
+}
+
+.statement-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #2c3e50;
+  flex: 1;
+  text-align: right;
+  direction: rtl;
+  font-weight: 400;
+}
+
+.statement-item.selected .statement-text {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+/* אייקונים לסוגי ההיגדים */
+.section-icon {
+  font-size: 1.2rem;
+}
+
+/* אנימציות */
+@keyframes checkmark {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.statement-checkbox.checked::after {
+  content: "✓";
+  animation: checkmark 0.3s ease;
+}
+
+/* רספונסיבי */
+@media (max-width: 768px) {
+  .SubDomainGroup {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subdomain-title {
+    font-size: 1.2rem;
+  }
+  
+  .statement-item {
+    padding: 0.75rem;
+  }
+  
+  .statement-text {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,102 @@
+/* StrengthChart.css */
+
+.strength-chart {
+  background: linear-gradient(135deg, #f8fffa, #e8f8f0);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #27ae60;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(46, 204, 113, 0.3);
+}
+
+.custom-tooltip {
+  background: white;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 280px;
+  font-family: inherit;
+  direction: rtl;
+  text-align: right;
+}
+
+.custom-tooltip .tooltip-header {
+  font-size: 14px;
+  color: #27ae60;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.custom-tooltip .tooltip-content {
+  font-size: 13px;
+}
+
+.custom-tooltip .tooltip-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+  gap: 12px;
+}
+
+.custom-tooltip .tooltip-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.custom-tooltip .tooltip-value {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.custom-tooltip .tooltip-subdomains {
+  margin-top: 8px;
+}
+
+.custom-tooltip .tooltip-subdomains ul {
+  margin: 4px 0 0 0;
+  padding-right: 16px;
+  list-style-type: disc;
+}
+
+.custom-tooltip .tooltip-subdomains li {
+  color: #555;
+  font-size: 12px;
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .strength-chart {
+    padding: 1rem;
+  }
+  
+  .chart-title {
+    font-size: 1.1rem;
+  }
+  
+  .custom-tooltip {
+    max-width: 240px;
+    padding: 10px;
+  }
+  
+  .custom-tooltip .tooltip-header {
+    font-size: 13px;
+  }
+  
+  .custom-tooltip .tooltip-content {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,85 @@
+.core-domain-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.core-domain-chart .chart-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #9b59b6;
+}
+
+.core-domain-chart .custom-tooltip {
+  background: white;
+  border: 1px solid #9b59b6;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(155, 89, 182, 0.15);
+  max-width: 280px;
+  font-family: inherit;
+  direction: rtl;
+  text-align: right;
+}
+
+.core-domain-chart .tooltip-header {
+  font-size: 14px;
+  color: #8e44ad;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e8daef;
+  font-weight: 600;
+}
+
+.core-domain-chart .tooltip-content {
+  font-size: 13px;
+}
+
+.core-domain-chart .tooltip-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  gap: 12px;
+}
+
+.core-domain-chart .tooltip-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.core-domain-chart .tooltip-value {
+  color: #8e44ad;
+  font-weight: 600;
+}
+
+.core-domain-chart .tooltip-description {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.core-domain-chart .no-data {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+@media (max-width: 768px) {
+  .core-domain-chart .chart-title {
+    font-size: 1.1rem;
+  }
+  
+  .core-domain-chart .custom-tooltip {
+    max-width: 240px;
+    padding: 10px;
+  }
+}
